@@ -1,4 +1,4 @@
-// get all workout data from back-end
+// Backend workout data
 
 fetch("/api/workouts/range")
   .then(response => {
