@@ -2,6 +2,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const htmlRoutes = require('./routes/htmlRoutes.js')
+const apiRoutes = require('./routes/apiRoutes.js');
+
 // const ecstatic = require('ecstatic');
 // const http = require('http');
 

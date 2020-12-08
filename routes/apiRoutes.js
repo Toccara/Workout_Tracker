@@ -42,3 +42,4 @@ router.put("/api/workouts", (req, res) => {
 });
 
 //export routes for the server.js!
+module.exports = router;

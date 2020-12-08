@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const path = require("path");
 const apiRoutes = require('./routes/apiRoutes.js');
+
 app.use(apiRoutes);
 
 router.get("/stats", (req, res) => {
