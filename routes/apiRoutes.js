@@ -14,7 +14,7 @@ router.get("/api/workouts", (req, res) => {
 router.get("/api/workouts/:id", ({ params, body }, res) =>
 
     db.Workout.findByIdAndUpdate(
-        //giving the _id for mongo from the params passed in through the URL
+        //id for mongo from the params passed in through the URL
         db.Workout.findByIdAndUpdate(params.id, params.body)
             .then((updatedWorkout) => {
                 { $push: { exercises: body } }
