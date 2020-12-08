@@ -11,19 +11,17 @@ router.get("/api/workouts", (req, res) => {
         .catch((err) => res.json(err));
 });
 
-router.get("/api/workouts/:id", ({ params, body }(req, res) =>
+router.get("/api/workouts/:id", ({ params, body }, res) =>
 
     db.Workout.findByIdAndUpdate(
         //giving the _id for mongo from the params passed in through the URL
-        { _id: params.id },
-
-
-.then((updatedWorkout) => {
-            { $push: { exercises: body } }
-    )
+        db.Workout.findByIdAndUpdate(params.id, params.body)
+            .then((updatedWorkout) => {
+                { $push: { exercises: body } }
+            );
         res.json(updatedWorkout);
       })
-      .catch ((err) => res.json(err));
+      .catch ((err) => res.json(err)
 });
 
 
